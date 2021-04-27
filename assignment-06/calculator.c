@@ -1,16 +1,19 @@
 /*
 * Project name: calculator
 --------------------------------------------
-    ID:
-    Name:
-    Mail:
+    ID:9839039
+    Name:Samin Mahdipour
+    Mail:Uni.mahdipour
 --------------------------------------------
-*/
+*/   
+int main()
+{
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
 
-int main() {
+int main()
+{
     double num1, num2;              // input values
     char op;                        // operator
     double result;                  // output
@@ -24,66 +27,62 @@ int main() {
     scanf("%lf", &num2);
 
     // do the operation
-    if(op == '+') {
-        // the part that calculates the sum of two numbers
-        result = num1 + num2;
-    }
-    else if(op == '-') {
-        // the part that calculates the difference of two numbers
-        result = num1 - num2;
-    }
-    else if(op == '*') {
-        // the part that calculates the product of two numbers
-        result = num1 * num2;
-    }
-    else if(op == '/') {
-        // the part that calculates the division of two numbers
-        // if denominator equals to zero exit the program
-        if(num2 == 0) {
+    switch(op)
+    {
+    case '+':
+         result = num1 + num2;
+         break;
+    case '-':
+         result = num1 - num2;
+         break:
+    case '*':
+         result = num1 * num2;
+         break;
+    case '/':
+         if(num2 == 0)
+            {
             printf("invalid input! divide by zero");
             return -1;
-        }
-        else {
+            }
+             else
+             {
             result = num1 / num2;
-        }
-    }
-    else if(op == '%') {
-        // the part that calculates the remainder of a number over another number
-        if ((num1 - (int)num1 == 0) && (num2 - (int)num2) == 0) {
-            result = (int)num1 % (int)num2;
+             }
+             break;
+    case '%':
+             if ((num1 - (int)num1 == 0) && (num2 - (int)num2) == 0) {
+             result = (int)num1 % (int)num2;
         }
         else {
             printf("incorrect input");
             return 0;
         }
-    }
-    else if(op == 's') {
-        // the part that calculates sine of an angle
+        break;
+    case 's':
         result = sin(num1 / num2);
-    }
-    else if(op == 'c') {
-        //the part that calculates the cosine of an angle
-        result = cos(num1 / num2);
-    }
-    else if(op == 't') {
-        // the part that calculates the tangent of an angle
+        break;
+    case 'c':
+        result= cos(num1 / num2);
+        break;
+    case 't':
         result = tan(num1 / num2);
+        break;
+    default:
+        puts("wrong");
     }
 
     // print result
-    if(op == 's') {
+    switch(op)
+    {
+    case 's':
         printf("result : sin(%lf/%lf) = %lf", num1, num2, result);
-    }
-    else if(op == 'c') {
+    case 'c':
         printf("result : cos(%lf/%lf) = %lf", num1, num2, result);
-    }
-    else if(op == 't') {
+    case 't':
         printf("result : tan(%lf/%lf) = %lf", num1, num2, result);
-    }
-    else if(op == '%') {
+    case '%':
         printf("result : %.lf %% %.lf = %.lf", num1, num2, result);
-    }
-    else {
+    default:
         printf("result : %lf %c %lf = %lf", num1, op, num2, result);
     }
 
