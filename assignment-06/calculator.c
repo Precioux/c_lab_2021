@@ -1,9 +1,9 @@
 /*
 * Project name: calculator
 --------------------------------------------
-    ID:
-    Name:
-    Mail:
+    ID:9839039
+    Name: samin mahdipour
+    Mail: uni.mahdipour@gmail.com
 --------------------------------------------
 */
 #include <stdlib.h>
