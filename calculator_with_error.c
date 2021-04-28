@@ -1,4 +1,8 @@
-
+/*
+ID: 9839039
+NAME: SAMIN MAHDIPOUR
+EMAIL: UNI.MAHDIPOUR@GMAIL.COM
+*/
 #include <stdlib.h>
 #include <math.h>
 
